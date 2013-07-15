@@ -18,6 +18,8 @@ class TestEverything < Test::Unit::TestCase
 
     # Get the known scores from the file, which is already in order.
     scores = File.readlines(File.expand_path(File.join('..','fixtures',"primes.#{sample_size}.list"), __FILE__)).reverse[30, 15].map(&:to_i)
+
+    # Compare to the algorithms answer. Verification!
     assert_equal scores, transaction_log.current_manifest(ROPL).get_scores(ROPL, 30, 15)
   end
 end
