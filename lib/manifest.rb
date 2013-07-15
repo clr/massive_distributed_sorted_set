@@ -1,5 +1,5 @@
-# Keep a log of the current manifest file to use.  This record must 
-# only be written by a serialized process with read-you-write 
+# Keep a log of the current manifest file to use.  This record must
+# only be written by a serialized process with read-you-write
 # consistency enforced.  It can be read asynchronously.
 #
 # [
